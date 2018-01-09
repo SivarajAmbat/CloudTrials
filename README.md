@@ -1,6 +1,6 @@
 # CloudTrials
 
-`
+```
 C:\WINDOWS\system32>powershell
 Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
@@ -15,9 +15,13 @@ InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure yo
 WARNING: Version '5.0.1' of module 'AzureRM' is already installed at 'C:\Program
 Files\WindowsPowerShell\Modules\AzureRM\5.0.1'. To install version '5.1.1', run Install-Module and add the -Force
 parameter, this command will install version '5.1.1' in side-by-side with version '5.0.1'.
+```
 
+```
 PS C:\WINDOWS\system32> Install-Module AzureRM -AllowClobber -Force
+
 PS C:\WINDOWS\system32> Import-Module AzureRM -RequiredVersion 5.1.1
+
 PS C:\WINDOWS\system32> Get-Module -ListAvailable AzureRM
 
 
@@ -31,7 +35,7 @@ Script     5.0.1      AzureRM
 
 
 PS C:\WINDOWS\system32> Login-AzureRmAccount
-`
+```
 
 ## Creating VM
 - Required admin credentials to be passed in popup
@@ -40,13 +44,13 @@ Troubleshooting:
 
 - Use `Get-AzureRmComputeResourceSku` for checking available SKU per location
 
-`
+```
 Get-AzureRmComputeResourceSku | where {$_.Locations.Contains("eastus")}
-`
+```
 
 Working Script:
 
-`
+```
 # Variables for common values
 $resourceGroup = "demoResourceGroup"
 $location = "eastus"
@@ -90,4 +94,4 @@ Add-AzureRmVMNetworkInterface -Id $nic.Id
 
 # Create a virtual machine
 New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
-`
+```
