@@ -37,7 +37,7 @@ Script     5.0.1      AzureRM
 PS C:\WINDOWS\system32> Login-AzureRmAccount
 ```
 
-## Creating VM
+# Creating VM
 - Required admin credentials to be passed in popup
 
 Troubleshooting:
@@ -94,4 +94,11 @@ Add-AzureRmVMNetworkInterface -Id $nic.Id
 
 # Create a virtual machine
 New-AzureRmVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
+```
+
+
+# Removing the Resource Group
+
+```
+Remove-AzureRmResourceGroup -Name demoResourceGroup
 ```
