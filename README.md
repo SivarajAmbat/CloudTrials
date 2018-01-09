@@ -1,4 +1,4 @@
-# CloudTrials
+# Creating a fully configured VM in PowerShell
 
 ```
 C:\WINDOWS\system32>powershell
