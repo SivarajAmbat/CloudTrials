@@ -1,4 +1,5 @@
 # CloudTrials
+
 `
 C:\WINDOWS\system32>powershell
 Windows PowerShell
@@ -37,7 +38,7 @@ PS C:\WINDOWS\system32> Login-AzureRmAccount
 
 Troubleshooting:
 
-- Use `Get-AzureRmComputeResourceSku' for checking available SKU per location
+- Use `Get-AzureRmComputeResourceSku` for checking available SKU per location
 
 `
 Get-AzureRmComputeResourceSku | where {$_.Locations.Contains("eastus")}
