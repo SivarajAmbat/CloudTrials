@@ -69,6 +69,14 @@ EXPOSE 80
 CMD ["ping","-t","localhost"]
 ```
 
+
+Tested: :+1:
+
+```
+FROM microsoft/aspnet
+COPY ./bin/Release/PublishOutput /inetpub/wwwroot
+```
+
 ### Deploying an ASP.NET Core application on Windows Container
 Tested: NO
 ```
